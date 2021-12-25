@@ -19,124 +19,105 @@
 }
 
 .home-top {
-  background: url('imges/img_1.jpg')
-    center center/cover;
-    height: 300px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-  
+  background: url("imges/img_1.jpg") center center/cover;
+  height: 300px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
-.columns1{
-  background: url('imges/img_2.jpg')
-    center center/cover;
-    height: 200px;
-    width: 315px;
-    text-align: left;
+.columns1 {
+  background: url("imges/img_2.jpg") center center/cover;
+  height: 300px;
+  width: 315px;
+  text-align: left;
   color: azure;
 }
-.intro{
+.intro {
   text-align: center;
   color: azure;
 }
 
-.search_bottun{
-  align-items: center;
+.columns2 {
+  background: url("imges/img_3.jpeg") center center/cover;
+  height: 200px;
+  width: 632px;
+  text-align: left;
+  color: azure;
+}
+.columns3 {
+  background-color: dodgerblue;
+  color: azure;
+  text-align: left;
+  height: 200px;
+  width: 315px;
+  padding: 2px;
 }
 
-
-.columns2{
-  background: url('imges/img_3.jpeg')
-    center center/cover;
-    height: 200px;
-    width: 632px;
-    text-align: left;
-    color: azure;
-
-    
+.columns4 {
+  background-color: royalblue;
+  height: 200px;
+  width: 315px;
+  text-align: center;
+  color: azure;
 }
-.columns3{
-    background-color: dodgerblue;
-    color: azure;
-    text-align: left;
-    height: 200px;
-    width: 315px;
-    padding: 2px;
-  }
-    
-  .columns4{
-      background-color: royalblue;
-      height: 200px;
-      width: 315px;
-      text-align: center;
-      color: azure;
-
-    }
-    .columns5{
-      color: midnightblue;
-    }
-.follow{
+.columns5 {
+  color: midnightblue;
+}
+.follow {
   text-align: left;
   padding: 6px;
 }
-.follow2{
+.follow2 {
   text-align: right;
   padding: 7px;
   color: deepskyblue;
 }
 
-  .paragreaph1{
-      padding: 2px;
-    }
+.paragreaph1 {
+  padding: 2px;
+}
 
-    .columns6{
-      background: url('imges/img_7.jpg')
-      center center/cover;
-      height: 200px;
-      width: 315px;
-    }
-    .columns7{
-      color: midnightblue;
+.columns6 {
+  background: url("imges/img_7.jpg") center center/cover;
+  height: 200px;
+  width: 315px;
+}
+.columns7 {
+  color: midnightblue;
+}
 
-    }
+.columns8 {
+  background: url("imges/img8.jpeg") center center/cover;
+  height: 200px;
+  width: 315px;
+}
 
-    .columns8{
-      background: url('imges/img8.jpeg')
-      center center/cover;
-      height: 200px;
-      width: 315px;
-    }
+.columns9 {
+  background: url("imges/img9.jpeg") center center/cover;
+  height: 200px;
+  width: 315px;
+}
 
-    .columns9{
-      background: url('imges/img9.jpeg')
-      center center/cover;
-      height: 200px;
-      width: 315px;
-    }
+.columns10 {
+  background: url("imges/img11.jpeg") center center/cover;
+  height: 200px;
+  width: 315px;
+}
 
-    .columns10{
-      background: url('imges/img11.jpeg')
-      center center/cover;
-      height: 200px;
-      width: 315px;
-    }
+.columns11 {
+  background: url("imges/img10.jpeg") center center/cover;
+  height: 200px;
+  width: 315px;
+}
 
-    .columns11{
-      background: url('imges/img10.jpeg')
-      center center/cover;
-      height: 200px;
-      width: 315px;
-
-    }
-
-    /* .columns8{
+/* .columns8{
       background: url('imges/img_7.jpg')
       center center/cover;
       height: 200px;
       width: 315px;
     } */
-    /* .columns5{
+/* .columns5{
     
       height: 200px;
       width: 632px;
@@ -148,9 +129,7 @@
       width: 632px;
     } */
 .category {
-  
 }
-
 
 w-25 {
   width: 25%;

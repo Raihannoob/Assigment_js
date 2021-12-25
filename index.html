@@ -127,12 +127,166 @@
               <div class="intro">
                 <h2> <br> <br> <br> Journey  </h2>
                 <h1> Stories From Around The world </h1>
-                <input type="text" id="" onkeyup="myFunction()" placeholder="Search" title="Search"  border-radius="50px 20px;" > <i class="fas fa-search"></i>  
+
+          <div class="container">
+            <section class="section">
+              
+              <div class="d-flex flex-row bd-highlight mb-3 justify-content-center">
+             <!-- Search -->
+                <div class="search p-2 bd-highlight">
+                <!-- <i class="fas fa-search-location"></i> -->
+                <input type="text" id="searchInput" class="form-control rounded-0" placeholder="Search location" />
+                </div>
+             <!-- checkouts -->
+                <div class="checkinCheckout p-2 bd-highlight">
+                  <!-- <i class="far fa-calendar-alt"></i> -->
+                  <input type="text" class="form-control rounded-0" id="input-id" placeholder="Check In > Check Out" />
+                </div>
+              <!-- Guest -->
+                <div class="btn-group  p-2">
+                  <button type="button" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
+                    data-bs-toggle="modal" data-bs-target="#guestsModal">
+                    <i class="far fa-user-friends"></i>
+                    &nbsp; Guests &nbsp;
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a id="showGuests" class="dropdown-item" href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal fade" id="guestsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          <span>Guests: </span>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="
+                                      parent
+                                      container
+                                      d-flex
+                                      justify-content-center
+                                      align-items-center
+                                      h-100
+                                    ">
+                          <div class="child">
+                            <button class="btn btn-minus rounded-circle" style="font-size: large" onclick="decrement()">
+                              <i class="fal fa-minus-circle fa-2x"></i>
+                            </button>
+                            <span id="updateGuestInfo" style="margin: 2em; font-size: large">
+                              0
+                            </span>
+                            <button class="btn btn-minus rounded-circle" onclick="increment()">
+                              <i class="fal fa-plus-circle fa-2x"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" style="background-color: #f7941d"
+                          onclick="guestupdate()">
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- price -->
+                          <div class="btn-group  p-2 price-range-area">
+                            <button type="button" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
+                              data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              &nbsp; Price Range &nbsp;
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a id="showprice" class="dropdown-item" href="#"></a>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">
+                                    <span>Price Range: </span>
+                                  </h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="price-range-slider">
+                                    <p class="range-value">
+                                      <input style="display: flex; justify-content: center" type="text" id="amount" readonly />
+                                    </p>
+                                    <div id="slider-range" class="range-bar"></div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" data-bs-dismiss="modal" class="btn btn btn-apply" onclick="rangeprice()">
+                                    Apply
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                <!-- Search -->
+                
+                 <div class="p-2 search-area">
+                            <button type="button "  class="form-control w-auto btn btn-search btn-light rounded-0" data-bs-toggle="modal"
+                              data-bs-target="#finalModal" onclick="showSearchData()">
+                              Search
+                            </button>
+                  </div>
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="finalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">
+                                    Search Result
+                                  </h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <p>Search: <span id="placeSearchValue"></span></p>
+                                  <p>Check In: <span id="checkInValue"></span></p>
+                                  <p>Check Out: <span id="checkOutValue"></span></p>
+                                  <p>Guests: <span id="guestsValue"></span></p>
+                                  <p>Price Range: <span id="priceRangeValue"></span></p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    Close
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
               </div>
+                  
+            </section>
+          </div>
+            </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> 
+     </div>
+
+
+
+    
+   
+    <div class="container">
       <!-- 2nd row! -->
       <section class="section">
         <div class="row mb-4" style="height: 200px">
