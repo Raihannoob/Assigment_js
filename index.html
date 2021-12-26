@@ -41,7 +41,8 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    
+    <!-- My js script -->
+    <script src="script.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -175,8 +176,8 @@
                 <div class="btn-group  p-2">
                   <button type="button" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
                     data-bs-toggle="modal" data-bs-target="#guestsModal">
-                    <i class="far fa-user-friends"></i>
-                    &nbsp; Guests &nbsp;
+                    <i class="far fa-user-friends" ></i>
+                    &nbsp; Guests  &nbsp; 
                   </button>
                   <ul class="dropdown-menu">
                     <li>
@@ -187,7 +188,7 @@
                 <div class="modal fade" id="guestsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
-                      <div class="modal-header">
+                      <div class="modal-header ">
                         <h5 class="modal-title" id="exampleModalLabel">
                           <span>Guests: </span>
                         </h5>
@@ -203,13 +204,13 @@
                                       h-100
                                     ">
                           <div class="child">
-                            <button class="btn btn-minus rounded-circle" style="font-size: large" onclick="decrement()">
+                            <button class="btn btn-minus " style="font-size: large" onclick="decrement()">
                               <i class="fal fa-minus-circle fa-2x"></i>
                             </button>
                             <span id="updateGuestInfo" style="margin: 2em; font-size: large">
                               0
                             </span>
-                            <button class="btn btn-minus rounded-circle" onclick="increment()">
+                            <button class="btn btn-minus" onclick="increment()">
                               <i class="fal fa-plus-circle fa-2x"></i>
                             </button>
                           </div>

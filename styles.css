@@ -38,6 +38,14 @@
   color: azure;
 }
 
+.modal-header {
+  background-color: white;
+  color: black;
+}
+#updateGuestInfo {
+  color: black;
+}
+
 .columns2 {
   background: url("imges/img_3.jpeg") center center/cover;
   height: 200px;
