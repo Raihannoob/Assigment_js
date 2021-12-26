@@ -45,7 +45,10 @@
 #updateGuestInfo {
   color: black;
 }
-
+.modal-body {
+  background-color: white;
+  color: black;
+}
 .columns2 {
   background: url("imges/img_3.jpeg") center center/cover;
   height: 200px;

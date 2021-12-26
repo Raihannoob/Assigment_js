@@ -3,6 +3,7 @@
   <head>
     <!-- For css -->
     <link rel="stylesheet" href="styles.css" />
+    
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -227,43 +228,49 @@
                 </div>
 
               <!-- price -->
-                          <div class="btn-group  p-2 price-range-area">
-                            <button type="button" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
-                              data-bs-toggle="modal" data-bs-target="#exampleModal">
-                              &nbsp; Price Range &nbsp;
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a id="showprice" class="dropdown-item" href="#"></a>
-                              </li>
-                            </ul>
+                    <div class="btn-group  p-2 price-range-area">
+                      <button type="button" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        &nbsp; Price Range &nbsp;
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a id="showprice" class="dropdown-item" href="#"></a>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              <span>Price Range: </span>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">
-                                    <span>Price Range: </span>
-                                  </h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="price-range-slider">
-                                    <p class="range-value">
-                                      <input style="display: flex; justify-content: center" type="text" id="amount" readonly />
-                                    </p>
-                                    <div id="slider-range" class="range-bar"></div>
-                                  </div>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" data-bs-dismiss="modal" class="btn btn btn-apply" onclick="rangeprice()">
-                                    Apply
-                                  </button>
-                                </div>
-                              </div>
+                          <div class="modal-body">
+                            <div class="price-range-slider">
+                              <p class="range-value">
+                                <!-- <input style="display: flex; justify-content: center" type="text" id="amount" readonly /> -->
+                                <input style="display: flex; justify-content: center" type="range" id="amount" class="form-range" min="0" max="3000" step="100" />
+
+
+                              </p>
+                              <div id="slider-range" class="range-bar"></div>
                             </div>
                           </div>
+                          <div class="modal-footer">
+                            <button type="button" data-bs-dismiss="modal" class="btn btn btn-primary" style="background-color: #f7941d" onclick="rangeprice()">
+                              Apply
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
 
 
                 <!-- Search -->
@@ -286,6 +293,7 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
+
                                   <p>Search: <span id="placeSearchValue"></span></p>
                                   <p>Check In: <span id="checkInValue"></span></p>
                                   <p>Check Out: <span id="checkOutValue"></span></p>
@@ -312,7 +320,21 @@
       </section> 
      </div>
 
-
+<script>
+  function showSearchData() {
+    let checkInValue = hdpkr.getValue().slice(0, 10);
+    let checkOutValue = hdpkr.getValue().slice(13);
+    let seachLocationValue = document.getElementById("searchInput").value;
+    document.getElementById("placeSearchValue").innerHTML =
+      seachLocationValue;
+    document.getElementById("checkInValue").innerHTML = checkInValue;
+    document.getElementById("checkOutValue").innerHTML = checkOutValue;
+    document.getElementById("guestsValue").innerHTML =
+      document.getElementById("updateGuestInfo").innerText;
+    document.getElementById("priceRangeValue").innerHTML =
+      document.getElementById("amount").value;
+  }
+</script>
 
     
    
