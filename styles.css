@@ -258,3 +258,8 @@ input[type="range"]:active::-webkit-slider-thumb{
     right: 0;
 }
 /* Price Range Picker End */
+
+.list{
+  background-color: #ffffff;
+  color: black;
+}
