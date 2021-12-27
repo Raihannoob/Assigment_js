@@ -1,199 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- For css -->
-    <link rel="stylesheet" href="styles.css" />
-    
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>rent by owner</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
-    
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.0.2/dist/css/hotel-datepicker.css" />
-    
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-input-spinner@3.1.7/src/bootstrap-input-spinner.min.js"></script>
-  
-    
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fecha@4.2.1/lib/fecha.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.0.2/dist/js/hotel-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
-      integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<head>
+  <!-- For css -->
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-bricks"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"
-            />
-          </svg>
-          rent by owner
-        </a>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>rent by owner</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Rentals
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Nearby
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Destination
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-            <button class="nav-bottom">Find a vactional Rental</button>
-          </ul>
-        </div>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.0.2/dist/css/hotel-datepicker.css" />
+
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-input-spinner@3.1.7/src/bootstrap-input-spinner.min.js"></script>
+
+
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fecha@4.2.1/lib/fecha.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.0.2/dist/js/hotel-datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+    integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bricks"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z" />
+        </svg>
+        rent by owner
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Rentals
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Nearby
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Destination
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+
+          <button class="nav-bottom">Find a vactional Rental</button>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- 1st row! -->
-    <div class="container">
-      <section class="section">
-        <div class="mb-4">
-          <div class="row">
-            <div class="col-sm home-top">
-              <div class="intro">
-                <h2> <br> <br> <br> Journey  </h2>
-                <h1> Stories From Around The world </h1>
+  <!-- 1st row! -->
+  <div class="container">
+    <section class="section">
+      <div class="mb-4">
+        <div class="row">
+          <div class="col-sm home-top">
+            <div class="intro">
+              <h2> <br> <br> <br> Journey </h2>
+              <h1> Stories From Around The world </h1>
 
-          <div class="container">
-            <section class="section">
-              
-              <div class="d-flex flex-row bd-highlight mb-3 justify-content-center">
-             <!-- Search -->
-                <div class="search p-2 bd-highlight">
-                <input type="text" id="location" class="form-control rounded-0" placeholder="Search location" onkeypress="check_length()"/>
-                <ul class="list" ></ul>
-              </div>
-                
-             <!-- checkouts -->
-                <div class="checkinCheckout p-2">
-                  <input type="text" class="form-control rounded-0" id="date-id" placeholder="Check In > Check Out" />
-                </div>
-            <!-- hotel date picker javascript code -->
-                <script>
-                  var hdpkr = new HotelDatepicker(document.getElementById("date-id"));
-                </script>
-              <!-- Guest -->
-                <div class="btn-group  p-2 h-25">
-                  <button id="gid" type="button" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
-                    data-bs-toggle="modal" data-bs-target="#guestsModal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                    </svg>
-                    Guest
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a id="showGuests" class="dropdown-item" href="#"></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="modal fade" id="guestsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header ">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                          <span>Guests: </span>
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="
+              <div class="container">
+                <section class="section">
+
+                  <div class="d-flex flex-row bd-highlight mb-3 justify-content-center">
+                    <!-- Search -->
+                    <div class="search p-2 bd-highlight">
+                      <input type="text" id="location" class="form-control rounded-0" placeholder="Search location"
+                        onkeypress="check_length()" />
+                      <ul class="list"></ul>
+                    </div>
+
+                    <!-- checkouts -->
+                    <div class="checkinCheckout p-2">
+                      <input type="text" class="form-control rounded-0" id="date-id"
+                        placeholder="Check In > Check Out" />
+                    </div>
+                    <!-- hotel date picker javascript code -->
+                    <script>
+                      var hdpkr = new HotelDatepicker(document.getElementById("date-id"));
+                    </script>
+                    <!-- Guest -->
+                    <div class="btn-group  p-2 h-25">
+                      <button id="gid" type="button" class="btn btn-light dropdown-toggle" aria-expanded="false"
+                        role="button" data-bs-toggle="modal" data-bs-target="#guestsModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-person-circle" viewBox="0 0 16 16">
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                          <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                        </svg>
+                        Guest
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a id="showGuests" class="dropdown-item" href="#"></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="modal fade" id="guestsModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header ">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              <span>Guests: </span>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="
                                       parent
                                       container
                                       d-flex
@@ -201,35 +183,37 @@
                                       align-items-center
                                       h-100
                                     ">
-                          <div class="child">
-                            <button class="btn btn-minus " style="font-size: large" onclick="GuestInfo_decrement()">
-                              <i class="fal fa-minus-circle fa-2x"></i>
-                            </button>
-                            <span id="GuestInfo" style="margin: 2em; font-size: large">
-                              0
-                            </span>
-                            <button class="btn btn-minus" onclick="GuestInfo_increment()">
-                              <i class="fal fa-plus-circle fa-2x"></i>
+                              <div class="child">
+                                <button class="btn btn-minus " style="font-size: large" onclick="GuestInfo_decrement()">
+                                  <i class="fal fa-minus-circle fa-2x"></i>
+                                </button>
+                                <span id="GuestInfo" style="margin: 2em; font-size: large">
+                                  0
+                                </span>
+                                <button class="btn btn-minus" onclick="GuestInfo_increment()">
+                                  <i class="fal fa-plus-circle fa-2x"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-bs-dismiss="modal" class="btn btn-primary"
+                              style="background-color: #f7941d" onclick="GuestInfo_update()">
+                              Apply
                             </button>
                           </div>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" style="background-color: #f7941d"
-                          onclick="GuestInfo_update()">
-                          Apply
-                        </button>
-                      </div>
                     </div>
-                  </div>
-                </div>
 
-              <!-- price -->
+                    <!-- price -->
                     <div class="btn-group  p-2 price-range-area h-25">
-                      <button type="button" id="pid" class="btn btn-light dropdown-toggle" aria-expanded="false" role="button"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
-                          <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+                      <button type="button" id="pid" class="btn btn-light dropdown-toggle" aria-expanded="false"
+                        role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                          <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
                         </svg>
                         Price Range
                       </button>
@@ -239,8 +223,9 @@
                         </li>
                       </ul>
                     </div>
-                    
-                    <div class="modal fade something" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                    <div class="modal fade something" id="exampleModal" tabindex="-1"
+                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog ">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -252,23 +237,24 @@
                           <div class="modal-body">
                             <div class="wrapper">
                               <div class="values">
-                                  <span id="range1">
-                                     0
-                                  </span>
-                                  <span> &dash; </span>
-                                  <span id="range2">
-                                    1000
-                                  </span>
+                                <span id="range1">
+                                  0
+                                </span>
+                                <span> &dash; </span>
+                                <span id="range2">
+                                  1000
+                                </span>
                               </div>
                               <div class="price-container">
-                                  <div class="slider-track"></div>
-                                  <input type="range" min="0" max="1000" value="0" id="slider-1" oninput="slideOne()">
-                                  <input type="range" min="0" max="1000" value="1000" id="slider-2" oninput="slideTwo()">
+                                <div class="slider-track"></div>
+                                <input type="range" min="0" max="1000" value="0" id="slider-1" oninput="slideOne()">
+                                <input type="range" min="0" max="1000" value="1000" id="slider-2" oninput="slideTwo()">
                               </div>
-                          </div>
+                            </div>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" data-bs-dismiss="modal" class="btn btn btn-primary" style="background-color: #f7941d" onclick="udateprice()">
+                            <button type="button" data-bs-dismiss="modal" class="btn btn btn-primary"
+                              style="background-color: #f7941d" onclick="udateprice()">
                               Apply
                             </button>
                           </div>
@@ -280,231 +266,243 @@
 
 
 
-                <!-- Search -->
-                
-                 <div class="p-2 search-area">
-                            <button type="button "  class="form-control w-auto btn btn-search btn-light rounded-0" data-bs-toggle="modal"
-                              data-bs-target="#finalModal" onclick="showSearchData()">
-                              Search
-                            </button>
-                  </div>
-                          
-                          <!-- Modal -->
-                          <div class="modal fade" id="finalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">
-                                    Search Result
-                                  </h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
+                    <!-- Search -->
 
-                                  <p>Search Location: <span id="Search"></span></p>
-                                  <p>Check In: <span id="checkIn"></span></p>
-                                  <p>Check Out: <span id="checkOut"></span></p>
-                                  <p>Guests: <span id="guests"></span></p>
-                                  <p>Minimum price: ৳  <span id="minprice"></span></p>
-                                  <p>Maximum price: ৳ <span id="maxprice"></span></p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #f7941d" >
-                                    Close
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
+                    <div class="p-2 search-area">
+                      <button type="button " class="form-control w-auto btn btn-search btn-light rounded-0"
+                        data-bs-toggle="modal" data-bs-target="#finalModal" onclick="showSearchData()">
+                        Search
+                      </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="finalModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              Search Result
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
+                          <div class="modal-body">
 
+                            <p>Search Location: <span id="Search"></span></p>
+                            <p>Check In: <span id="checkIn"></span></p>
+                            <p>Check Out: <span id="checkOut"></span></p>
+                            <p>Guests: <span id="guests"></span></p>
+                            <p>Minimum price: ৳ <span id="minprice"></span></p>
+                            <p>Maximum price: ৳ <span id="maxprice"></span></p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                              style="background-color: #f7941d">
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </section>
               </div>
-                  
-            </section>
-          </div>
-            </div>
             </div>
           </div>
         </div>
-      </section> 
-     </div>
+      </div>
+    </section>
+  </div>
 
-<script>
-  function showSearchData() {
-    let checkInValue = hdpkr.getValue().slice(0, 10);
-    let checkOutValue = hdpkr.getValue().slice(13);
-    let seachLocationValue = document.getElementById("location").value;
-    document.getElementById("Search").innerHTML =
-      seachLocationValue;
-    document.getElementById("checkIn").innerHTML = checkInValue;
-    document.getElementById("checkOut").innerHTML = checkOutValue;
-    document.getElementById("guests").innerHTML =
-      document.getElementById("GuestInfo").innerText;
-    document.getElementById("minprice").innerHTML =
-      document.getElementById("slider-1").value;
+  <script>
+    function showSearchData() {
+      let checkInValue = hdpkr.getValue().slice(0, 10);
+      let checkOutValue = hdpkr.getValue().slice(13);
+      let seachLocationValue = document.getElementById("location").value;
+      document.getElementById("Search").innerHTML =
+        seachLocationValue;
+      document.getElementById("checkIn").innerHTML = checkInValue;
+      document.getElementById("checkOut").innerHTML = checkOutValue;
+      document.getElementById("guests").innerHTML =
+        document.getElementById("GuestInfo").innerText;
+      document.getElementById("minprice").innerHTML =
+        document.getElementById("slider-1").value;
       document.getElementById("maxprice").innerHTML =
-      document.getElementById("slider-2").value;
-  }
-</script>
+        document.getElementById("slider-2").value;
+    }
+  </script>
 
-    
-   
-    <div class="container">
-      <!-- 2nd row! -->
-      <section class="section">
-        <div class="row mb-4" style="height: 200px">
-          <div class="col-sm-3 pe-2">
-            <div class="columns1">
-              <H3>The best sedona <br> Hiking Trails <br> </H3>
-              <p>
-                <br> <br><br> <br> By Staff Writer 
-              <p>
 
-            </div>
-          </div>
-          <div class="col-sm-6 ml-1 ps-2 pe-2">
-            <div class="columns2">
-              <h3> Tybee Island Fun Things To do While on <br> Vacation <br> </h3>
-              <p>
-                <br> <br><br> <br> By Staff Writer 
-              <p>
-            </div>
-          </div>
-          <div class="col-sm-3 ps-2 ">
-            <div class="columns3">
-              <h3> The Night Life  and the food </h3>
-              <p>
-                <br> <br><br> <br> <a href="#" style="color: aliceblue;" > Explore Liberia  </a> 
-              <p>
-            </div>
+
+  <div class="container">
+    <!-- 2nd row! -->
+    <section class="section">
+      <div class="row mb-4" style="height: 200px">
+        <div class="col-sm-3 pe-2">
+          <div class="columns1">
+            <H3>The best sedona <br> Hiking Trails <br> </H3>
+            <p>
+              <br> <br><br> <br> By Staff Writer
+            <p>
+
           </div>
         </div>
-      </section>
+        <div class="col-sm-6 ml-1 ps-2 pe-2">
+          <div class="columns2">
+            <h3> Tybee Island Fun Things To do While on <br> Vacation <br> </h3>
+            <p>
+              <br> <br><br> <br> By Staff Writer
+            <p>
+          </div>
+        </div>
+        <div class="col-sm-3 ps-2 ">
+          <div class="columns3">
+            <h3> The Night Life and the food </h3>
+            <p>
+              <br> <br><br> <br> <a href="#" style="color: aliceblue;"> Explore Liberia </a>
+            <p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- 3nd row! -->
-      <section class="section">
-        <div class="d-flex " style="height: 600px">
-          <div class="w-75">
-            <div class="row d-flex flex-row mb-4" style="height: 200px">
-              <div class="col-sm-4 pe-2">
-                <div class="columns4">
-                  <h3> <br> <br>  <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-bricks"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"
-                  />
-                </svg>
-                rent by owner
-              </a>
-            </h3>
+    <!-- 3nd row! -->
+    <section class="section">
+      <div class="d-flex " style="height: 600px">
+        <div class="w-75">
+          <div class="row d-flex flex-row mb-4" style="height: 200px">
+            <div class="col-sm-4 pe-2">
+              <div class="columns4">
+                <h3> <br> <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-bricks" viewBox="0 0 16 16">
+                    <path
+                      d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z" />
+                  </svg>
+                  rent by owner
+                  </a>
+                </h3>
 
-                </div>
-              </div>
-              <div class="col-sm-8 px-2">
-                <div class="columns5 bg-light">
-                  <h1>
-                    The Best Beach Towns in Florida You Need To Visit <br> 
-                  </h1>
-                  <p>
-                    Written By Staff Writer <br> <br>
-                    Let's start with the big picture. Planning a trip to Florida? Here are the
-                    best beaches where you should spend the week (or the month) on the
-                    beach with your....
-                  </p>
-
-                </div>
               </div>
             </div>
+            <div class="col-sm-8 px-2">
+              <div class="columns5 bg-light">
+                <h1>
+                  The Best Beach Towns in Florida You Need To Visit <br>
+                </h1>
+                <p>
+                  Written By Staff Writer <br> <br>
+                  Let's start with the big picture. Planning a trip to Florida? Here are the
+                  best beaches where you should spend the week (or the month) on the
+                  beach with your....
+                </p>
 
-            <div class="row mb-4" style="height: 200px">
-              <div class="col-sm-4 pe-2">
-                <div class="columns6">
-                  
-                </div>
               </div>
-              <div class="col-sm-8 px-2">
-                <div class="columns7 bg-light">
-                <h1> The Best Sarasota Area Beaches To Explore <br>  </h1>
+            </div>
+          </div>
+
+          <div class="row mb-4" style="height: 200px">
+            <div class="col-sm-4 pe-2">
+              <div class="columns6">
+
+              </div>
+            </div>
+            <div class="col-sm-8 px-2">
+              <div class="columns7 bg-light">
+                <h1> The Best Sarasota Area Beaches To Explore <br> </h1>
                 <p>
                   Written By Staff Writer <br> <br>
 
-                  Sarasota County has some of the best beaches in all of Florida and the Gulf of Mexico. So whether you're looking for a more chilled-out white sand beach to do..
-                </p>  
-                </div>
-              </div>
-            </div>
-
-            <div class="row mb-4" style="height: 200px">
-              <div class="col-sm-12 pe-2">
-                <div class="container bg-info">
-                  <h1 style="color: cyan;" >The is replete with everything that you need to have the perfect vacation  <br></h1> 
-                  <p style="color: cyan;"> <a href="">Find Perfection on Tybee Island <i class="fas fa-arrow-right" style="color:white; float: right;"></i></a> </a>  </p>
-                </div>
+                  Sarasota County has some of the best beaches in all of Florida and the Gulf of Mexico. So whether
+                  you're looking for a more chilled-out white sand beach to do..
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="w-25 ps-2">
-            <div class="container bg-light" style="height: 620px" >
-              <h5>
-                CATEGORIES <br>
-              </h5>
-              <p>
-                <a href="#" style="text-decoration: none;">Alabama<i class="fas fa-arrow-circle-down" style="color :cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Arizona<i class="fas fa-arrow-circle-down" style="color :cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Beaches<i class="fas fa-arrow-circle-down" style="color :cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">California<i class="fas fa-arrow-circle-down" style="color :cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Florida<i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Hawail<i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Hiking <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Maine <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Maryland <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Maine <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Massachusetts <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Museums  <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;"> Oregon  <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-              <p>
-                <a href="#" style="text-decoration: none;">Parks <i class="fas fa-arrow-circle-down" style="color: cyan; float: right;"></i></a>
-              </p>
-
-
+          <div class="row mb-4" style="height: 200px">
+            <div class="col-sm-12 pe-2">
+              <div class="container bg-info">
+                <h1 style="color: cyan;">The is replete with everything that you need to have the perfect vacation <br>
+                </h1>
+                <p style="color: cyan;"> <a href="">Find Perfection on Tybee Island <i class="fas fa-arrow-right"
+                      style="color:white; float: right;"></i></a> </a> </p>
               </div>
-            
+            </div>
           </div>
         </div>
-      </section>
 
-      <!-- <section class="section">
+        <div class="w-25 ps-2">
+          <div class="container bg-light" style="height: 620px">
+            <h5>
+              CATEGORIES <br>
+            </h5>
+            <p>
+              <a href="#" style="text-decoration: none;">Alabama<i class="fas fa-arrow-circle-down"
+                  style="color :cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Arizona<i class="fas fa-arrow-circle-down"
+                  style="color :cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Beaches<i class="fas fa-arrow-circle-down"
+                  style="color :cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">California<i class="fas fa-arrow-circle-down"
+                  style="color :cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Florida<i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Hawail<i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Hiking <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Maine <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Maryland <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Maine <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Massachusetts <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Museums <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;"> Oregon <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;">Parks <i class="fas fa-arrow-circle-down"
+                  style="color: cyan; float: right;"></i></a>
+            </p>
+
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section">
         <div class="row mb-4">
           <div class="col-sm-9">
             <div class="row mb-4 style="height: 100px"">
@@ -540,139 +538,135 @@
         </div>
       </section> -->
 
-      <!-- 4th row! -->
-      <section class="section ">
-        <div class="row" style="height:50px">
-          <div class="col-sm-12">
-            <div class="follow" >
-              <h5> The Adventures</h4>
-            </div>
-          </div>
-          
-        
-        </div>
-      </section>
-
-
-      <section class="section ">
-        <div class="row" style="height: 200px">
-          <div class="col-sm-3">
-            <div class="columns8"></div>
-          </div>
-          <div class="col-sm-3">
-            <div class="columns9"></div>
-          </div>
-          <div class="col-sm-3">
-            <div class="columns10"></div>
-          </div>
-          <div class="col-sm-3">
-            <div class="columns11"></div>
+    <!-- 4th row! -->
+    <section class="section ">
+      <div class="row" style="height:50px">
+        <div class="col-sm-12">
+          <div class="follow">
+            <h5> The Adventures</h4>
           </div>
         </div>
-      </section>
-      <section class="section ">
-        <div class="row" style="height:50px">
-          <div class="col-sm-12">
-            <div class="follow2" >
-              <h5>Follow US on Instragram</h4>
-            </div>
-          </div>
-          
-        
-        </div>
-      </section>
 
-    </div>
-    
-    <!-- Footer -->
-    <footer
-      class="text-center text-lg-start text-muted bg-light container-fluid p-0"
-    >
-      <div class="container">
-        <!-- Section: Social media -->
-        <section
-          class="
+
+      </div>
+    </section>
+
+
+    <section class="section ">
+      <div class="row" style="height: 200px">
+        <div class="col-sm-3">
+          <div class="columns8"></div>
+        </div>
+        <div class="col-sm-3">
+          <div class="columns9"></div>
+        </div>
+        <div class="col-sm-3">
+          <div class="columns10"></div>
+        </div>
+        <div class="col-sm-3">
+          <div class="columns11"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section ">
+      <div class="row" style="height:50px">
+        <div class="col-sm-12">
+          <div class="follow2">
+            <h5>Follow US on Instragram</h4>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-muted bg-light container-fluid p-0">
+    <div class="container">
+      <!-- Section: Social media -->
+      <section class="
             d-flex
             justify-content-center justify-content-lg-between
             border-bottom
-          "
-        >
-          <!-- Left -->
+          ">
+        <!-- Left -->
 
-          <!-- Right -->
-          
-          <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
+        <!-- Right -->
 
-        <!-- Section: Links  -->
-        <section class="">
-          <div class="text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4"> Find a Place to Stay</h6>
-                <p>
-                  All RBO Homes <br>
-                  Vacation Rentals <br>
-                  Cabins <br>
-                  Condos <br>
-                  Cottages <br>
-                  Ski Chalets <br>
-                </p>
-              </div>
-              <!-- Grid column -->
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
 
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4"><br></h6>
-                <p>
-                  Timeshares <br> RV Rentals <br> Boat Rentals <br> Villas <br> Hotels <br> Resorts
-
-                </p>
-              </div>
-              <!-- Grid column -->
-
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4"> About Us</h6>
-                <p>About Rent By Owner <br> 
-                  Our Travel Journal</p>
-                  <br>
-                  <h6>
-                    Support <br>
-                  </h6>
-                  <p>
-                    FAQS <br>
-                    List Your Property
-                  </p>
-
-              </div>
-              <!-- Grid column -->
-
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">Explore</h6>
-                 <p>
-                  My Profile <br>
-                  Site Map
-                 </p>
-              </div>
-              <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-          </div>
-        </section>
-      </div>
       <!-- Section: Links  -->
+      <section class="">
+        <div class="text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4"> Find a Place to Stay</h6>
+              <p>
+                All RBO Homes <br>
+                Vacation Rentals <br>
+                Cabins <br>
+                Condos <br>
+                Cottages <br>
+                Ski Chalets <br>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-      <!-- Copyright -->
-      <!-- <div
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4"><br></h6>
+              <p>
+                Timeshares <br> RV Rentals <br> Boat Rentals <br> Villas <br> Hotels <br> Resorts
+
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4"> About Us</h6>
+              <p>About Rent By Owner <br>
+                Our Travel Journal</p>
+              <br>
+              <h6>
+                Support <br>
+              </h6>
+              <p>
+                FAQS <br>
+                List Your Property
+              </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Explore</h6>
+              <p>
+                My Profile <br>
+                Site Map
+              </p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+    </div>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <!-- <div
         class="text-center p-4"
         style="background-color: rgba(0, 0, 0, 0.05)"
       >
@@ -681,66 +675,57 @@
           >MDBootstrap.com</a
         >
       </div> -->
-      <div class="row">
-        <div class="col-md-4">
-          <div>
-            <a href="" class="me-4 text-reset" style="text-decoration: none;">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset"style="text-decoration: none;" >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset" style="text-decoration: none;">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset" style="text-decoration: none;">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset" style="text-decoration: none;">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset" style="text-decoration: none;">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div>
+          <a href="" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
-        <div class="col-md-4">
-          <p>
-            <a href="#" style="margin-right: 20px; text-decoration: none; color: black; ">Privacy Policy</a>
-            <a href="#" style="text-decoration: none; color: black;" >Site</a>
-          </p>
-        </div>
-        <div
-        class=" col-md-4 text-center"
-      >
+      </div>
+      <div class="col-md-4">
+        <p>
+          <a href="#" style="margin-right: 20px; text-decoration: none; color: black; ">Privacy Policy</a>
+          <a href="#" style="text-decoration: none; color: black;">Site</a>
+        </p>
+      </div>
+      <div class=" col-md-4 text-center">
         © 2021 Copyright:
-        <a class="text-reset fw-bold" href="#"
-          >rent by owner</a
-        >
+        <a class="text-reset fw-bold" href="#">rent by owner</a>
       </div>
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="range_picker.js"></script>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="range_picker.js"></script>
+
+  <!-- My js script -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
     
-    <!-- My js script -->
-    <script src="script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript">
-
-      // window.load(check_length());
-  
-     
-  
       const data = [
         { "id": 503358, "Name": "Province of Ragusa, Sicily, Italy", "Count": 51, "SlashName": "italy\/sicily\/province-of-ragusa-vacation-rentals\/g100503358" },
         { "id": 416298, "Name": "Jerusalem, Jerusalem District, Israel", "Count": 4, "SlashName": "Israel\/Jerusalem-vacation-rentals\/g2579\/" },
@@ -750,78 +735,54 @@
         { "id": 414006, "Name": "Husavik, Northeast Region, Iceland", "Count": 2, "SlashName": "iceland\/northeast-region\/husavik-vacation-rentals\/g100414006" },
         { "id": 574074, "Name": "Llanddeusant, Anglesey, United Kingdom", "Count": 1, "SlashName": "wales\/north-wales\/anglesey\/llanddeusant-vacation-rentals\/g100574074" }
       ];
-  
-      console.log(data.length);
-  
+
+
       let areas = [];
-  
-      for(var i=0; i<data.length; i++) {
-        console.log(data[i].Name);
-        // let tempData = data[i].Name.split(",");
-        // console.log(tempData);
-        // for(var x in tempData) {
-        //   areas.push(tempData[x]);
-        // }
-        // areas.push(tempData);
+
+      for (var i = 0; i < data.length; i++) {
         areas.push(data[i].Name);
         console.log(areas);
-  
-      }
-  
-      let sortedData = areas.sort();
-  
-      console.log(sortedData);
-  
-      let input = document.getElementById("location");
-  
-      //Execute function on keyup
-        function generateSuggestion(str) {
-          console.log("Hello world");
-          //loop through above array
-          //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
-          removeElements();
-          for (let i of sortedData) {
-            console.log(i);
-            //convert input to lowercase and compare with each string
-  
-            if (i.toLowerCase().startsWith(str.toLowerCase()) && str != "") {
-              console.log(str);
-              //create li element
-              let listItem = document.createElement("li");
-              //One common class name
-              listItem.classList.add("list-items");
-              listItem.style.cursor = "pointer";
-              listItem.setAttribute("onclick", "displayNames('" + i + "')");
-              //Display matched part in bold
-              let word = "<b>" + i.substr(0, str.length) + "</b>";
-              word += i.substr(str.length);
-              //display the value in array
-              listItem.innerHTML = word;
-              document.querySelector(".list").appendChild(listItem);
-            }
-          }
-        };
-        function displayNames(value) {
-          input.value = value;
-          removeElements();
-        }
-        function removeElements() {
-          //clear all the item
-          let items = document.querySelectorAll(".list-items");
-          items.forEach((item) => {
-            item.remove();
-          });
-        }
-  
-        function check_length() {
-            let str = document.getElementById("location").value;
-            console.log(str.length);
-            if (str.length + 1 >= 3) {
-              generateSuggestion(str);
-            }
-          }
-    </script>
 
-   
-  </body>
+      }
+
+      let sortedData = areas.sort();
+      let input = document.getElementById("location");
+      function Suggestion(str) {
+        removeElements();
+        for (let i of sortedData) {
+          if (i.toLowerCase().startsWith(str.toLowerCase()) && str != "") {
+            let listItem = document.createElement("li");
+            listItem.classList.add("list-items");
+            listItem.style.cursor = "pointer";
+            listItem.setAttribute("onclick", "displayNames('" + i + "')");
+            let word = "<b>" + i.substr(0, str.length) + "</b>";
+            word += i.substr(str.length);
+            listItem.innerHTML = word;
+            document.querySelector(".list").appendChild(listItem);
+          }
+        }
+      };
+      function displayNames(value) {
+        input.value = value;
+        removeElements();
+      }
+      function removeElements() {
+        let items = document.querySelectorAll(".list-items");
+        items.forEach((item) => {
+          item.remove();
+        });
+      }
+
+      function check_length() {
+        let str = document.getElementById("location").value;
+        console.log(str.length);
+        if (str.length + 1 >= 3) {
+          Suggestion(str);
+        }
+      }
+  </script>
+
+
+</body>
+
 </html>
