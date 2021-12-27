@@ -1,18 +1,18 @@
 var guestNumber = 0;
 
-function increment() {
+function GuestInfo_increment() {
   guestNumber++;
-  document.getElementById("updateGuestInfo").innerHTML = guestNumber;
+  document.getElementById("GuestInfo").innerHTML = guestNumber;
 }
 
-function decrement() {
+function GuestInfo_decrement() {
   if (guestNumber > 0) {
     guestNumber--;
-    document.getElementById("updateGuestInfo").innerHTML = guestNumber;
+    document.getElementById("GuestInfo").innerHTML = guestNumber;
   }
 }
 
-function guestupdate() {
-  var guest = document.getElementById("updateGuestInfo").innerText;
+function GuestInfo_update() {
+  var guest = document.getElementById("GuestInfo").innerText;
   document.getElementById("showguest").innerHTML = guest;
 }

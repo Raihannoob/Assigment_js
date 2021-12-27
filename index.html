@@ -208,13 +208,13 @@
                                       h-100
                                     ">
                           <div class="child">
-                            <button class="btn btn-minus " style="font-size: large" onclick="decrement()">
+                            <button class="btn btn-minus " style="font-size: large" onclick="GuestInfo_decrement()">
                               <i class="fal fa-minus-circle fa-2x"></i>
                             </button>
-                            <span id="updateGuestInfo" style="margin: 2em; font-size: large">
+                            <span id="GuestInfo" style="margin: 2em; font-size: large">
                               0
                             </span>
-                            <button class="btn btn-minus" onclick="increment()">
+                            <button class="btn btn-minus" onclick="GuestInfo_increment()">
                               <i class="fal fa-plus-circle fa-2x"></i>
                             </button>
                           </div>
@@ -222,7 +222,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" data-bs-dismiss="modal" class="btn btn-primary" style="background-color: #f7941d"
-                          onclick="guestupdate()">
+                          onclick="GuestInfo_update()">
                           Apply
                         </button>
                       </div>
@@ -256,17 +256,17 @@
                             <div class="wrapper">
                               <div class="values">
                                   <span id="range1">
-                                      0
+                                     0
                                   </span>
                                   <span> &dash; </span>
                                   <span id="range2">
-                                      1000
+                                    1000
                                   </span>
                               </div>
                               <div class="price-container">
                                   <div class="slider-track"></div>
-                                  <input type="range" min="0" max="1000" value="100" id="slider-1" oninput="slideOne()">
-                                  <input type="range" min="0" max="1000" value="900" id="slider-2" oninput="slideTwo()">
+                                  <input type="range" min="0" max="1000" value="0" id="slider-1" oninput="slideOne()">
+                                  <input type="range" min="0" max="1000" value="1000" id="slider-2" oninput="slideTwo()">
                               </div>
                           </div>
                           </div>
@@ -304,11 +304,12 @@
                                 </div>
                                 <div class="modal-body">
 
-                                  <p>Search: <span id="placeSearchValue"></span></p>
-                                  <p>Check In: <span id="checkInValue"></span></p>
-                                  <p>Check Out: <span id="checkOutValue"></span></p>
-                                  <p>Guests: <span id="guestsValue"></span></p>
-                                  <p>Price Range: <span id="priceRangeValue"></span></p>
+                                  <p>Search Location: <span id="Search"></span></p>
+                                  <p>Check In: <span id="checkIn"></span></p>
+                                  <p>Check Out: <span id="checkOut"></span></p>
+                                  <p>Guests: <span id="guests"></span></p>
+                                  <p>Minimum price: <span id="minprice"></span></p>
+                                  <p>Maximum price: <span id="maxprice"></span></p>
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -335,14 +336,16 @@
     let checkInValue = hdpkr.getValue().slice(0, 10);
     let checkOutValue = hdpkr.getValue().slice(13);
     let seachLocationValue = document.getElementById("searchInput").value;
-    document.getElementById("placeSearchValue").innerHTML =
+    document.getElementById("Search").innerHTML =
       seachLocationValue;
-    document.getElementById("checkInValue").innerHTML = checkInValue;
-    document.getElementById("checkOutValue").innerHTML = checkOutValue;
-    document.getElementById("guestsValue").innerHTML =
-      document.getElementById("updateGuestInfo").innerText;
-    document.getElementById("priceRangeValue").innerHTML =
-      document.getElementById("amount").value;
+    document.getElementById("checkIn").innerHTML = checkInValue;
+    document.getElementById("checkOut").innerHTML = checkOutValue;
+    document.getElementById("guests").innerHTML =
+      document.getElementById("GuestInfo").innerText;
+    document.getElementById("minprice").innerHTML =
+      document.getElementById("slider-1").value;
+      document.getElementById("maxprice").innerHTML =
+      document.getElementById("slider-2").value;
   }
 </script>
 
